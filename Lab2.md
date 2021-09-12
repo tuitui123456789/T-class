@@ -53,3 +53,57 @@ void loop()
   	delay(1000);  
 }
 ````
+
+## 實作2-3, 讓你的RGB LED燈全彩模組也可會"呼吸", LED顏色變化是否有像"呼吸的效果"和示波器的波形有什麼關連性?
+![image](https://user-images.githubusercontent.com/89717270/132970649-5bc721b9-745e-48bd-a5c9-e8989a1ee7d2.png)
+
+程式
+````c
+int Red = 11;
+int Green = 10;
+int Blue = 9;
+int i = 0;
+int j = 0;
+void swapLED(int j, int i) {
+  switch (j) {
+    case 1:
+    analogWrite(Red, 0);
+    analogWrite(Green, i);
+    analogWrite(Blue, 0);
+    break;
+    case 2:
+    analogWrite(Red, 0);
+    analogWrite(Green, 0);
+    analogWrite(Blue, i);
+    break;
+    default:
+    analogWrite(Red, i);
+    analogWrite(Green, 0);
+    analogWrite(Blue, 0);
+    break;
+  }
+}
+
+void setup()
+{
+  pinMode(Red, OUTPUT);
+  pinMode(Green, OUTPUT);
+  pinMode(Blue, OUTPUT);
+}
+
+void loop()
+{
+  if (j > 3) {
+  	j = 0;
+  }
+  for (i = 1; i <= 255; i += 5) {
+    swapLED(j, i);
+    delay(30);
+  }
+  for (i = 255; i >= 1; i -= 5) {
+    swapLED(j, i);
+    delay(30);
+  }
+  j++;
+}
+````
