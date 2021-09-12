@@ -55,55 +55,57 @@ void loop()
 ````
 
 ## 實作2-3, 讓你的RGB LED燈全彩模組也可會"呼吸", LED顏色變化是否有像"呼吸的效果"和示波器的波形有什麼關連性?
-![image](https://user-images.githubusercontent.com/89717270/132970649-5bc721b9-745e-48bd-a5c9-e8989a1ee7d2.png)
+![image](https://user-images.githubusercontent.com/89717270/132971483-a2f6b2f2-bc75-47fb-be6a-6a9970a4af90.png)
 
 程式
 ````c
-int Red = 11;
+int brightness = 0;
+int Red = 9;
+int Blue = 11;
 int Green = 10;
-int Blue = 9;
-int i = 0;
-int j = 0;
-void swapLED(int j, int i) {
-  switch (j) {
-    case 1:
-    analogWrite(Red, 0);
-    analogWrite(Green, i);
-    analogWrite(Blue, 0);
-    break;
-    case 2:
-    analogWrite(Red, 0);
-    analogWrite(Green, 0);
-    analogWrite(Blue, i);
-    break;
-    default:
-    analogWrite(Red, i);
-    analogWrite(Green, 0);
-    analogWrite(Blue, 0);
-    break;
-  }
-}
-
 void setup()
 {
   pinMode(Red, OUTPUT);
-  pinMode(Green, OUTPUT);
-  pinMode(Blue, OUTPUT);
+  pinMode(Blue, OUTPUT);  
+  pinMode(Green, OUTPUT);  
+  
+  Serial.begin(9600); 
 }
-
 void loop()
 {
-  if (j > 3) {
-  	j = 0;
+  Serial.println("START");
+
+  for (brightness = 0; brightness <= 255; brightness += 5) {
+    analogWrite(Red, brightness);
+    delay(50); 
   }
-  for (i = 1; i <= 255; i += 5) {
-    swapLED(j, i);
-    delay(30);
+  for (brightness = 255; brightness >= 0; brightness -= 5) {
+    analogWrite(Red, brightness);
+    delay(50); 
   }
-  for (i = 255; i >= 1; i -= 5) {
-    swapLED(j, i);
-    delay(30);
+  delay(1000); 
+  
+
+  for (brightness = 0; brightness <= 255; brightness += 5) {
+    analogWrite(Blue, brightness);
+    delay(50); 
   }
-  j++;
+  for (brightness = 255; brightness >= 0; brightness -= 5) {
+    analogWrite(Blue, brightness);
+    delay(50); 
+  }  
+  delay(1000); 
+  
+
+  for (brightness = 0; brightness <= 255; brightness += 5) {
+    analogWrite(Green, brightness);
+    delay(50); 
+  }
+  for (brightness = 255; brightness >= 0; brightness -= 5) {
+    analogWrite(Green, brightness);
+    delay(50); 
+  }  
+  delay(1000);   
+  Serial.println("END");  
 }
 ````
