@@ -111,3 +111,20 @@ void loop()
 ````
 
 ## 實作2-4 analogRead(), 1024解析度 (i.e.,10-bit): 可變電阻 + 序列監視器與輸出; 當你改變可變電阻的阻值(e.g., 10K-ohm)時，序列監視器輸出的數值有什麼改變? 數值又有什麼意義呢?
+![image](https://user-images.githubusercontent.com/89717270/132971858-fce80a39-b456-4b9d-95e7-88ba745c4c7c.png)
+
+程式
+````c
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(A0);
+  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  float voltage = sensorValue * (5.0 / 1023.0);
+  // print out the value you read:
+  Serial.println(voltage);
+}
+````
