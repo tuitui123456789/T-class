@@ -1,7 +1,15 @@
 
-# 嵌入式系統 - 實作3: 使用超音波感測器 + LED控制, 常用的C語言程式介紹
+# 嵌入式系統 - 實作3: 使用超音波感測器 + LED控制, 常用的C語言程式介紹 <a name="000"/>
 
-## Lab 3-1: Ultrasonic Sensor (3-pin) + 測距 (以公分顯示即可) + RS232 Output
+## 目錄
+
+[Lab 3-1](#111)
+
+[Lab 3-2](#222)
+
+[Lab 3-3](#333)
+
+## Lab 3-1: Ultrasonic Sensor (3-pin) + 測距 (以公分顯示即可) + RS232 Output <a name="111"/>
 
 ![88](https://user-images.githubusercontent.com/89717270/134792769-7eabd026-aaa9-4aa3-9968-621f0fa25cb6.gif)
 
@@ -46,7 +54,7 @@ void loop()
 }
 ````
 
-## Lab 3-2: 超音波感測器 + LED (紅色LED:亮<70cm, 緑色LED: 亮>270cm, 藍色LED:亮, 介於70cm ~ 270cm之間) + RS232 Output
+## Lab 3-2: 超音波感測器 + LED (紅色LED:亮<70cm, 緑色LED: 亮>270cm, 藍色LED:亮, 介於70cm ~ 270cm之間) + RS232 Output <a name="222"/>
 
 ![chrome-capture (2)](https://user-images.githubusercontent.com/89717270/134793365-7dea43b4-8966-4d7a-8f2c-925102cc37a4.gif)
 
@@ -129,8 +137,8 @@ void loop()
 }
 ````
 
-## Lab 3-3: Arudino常用的C語言程式介紹與實作
-請使用Arudino, 通過Serial印出9X9乘法表, 計算時亮紅色LED, 綠色LED慢慢變亮亮完成時全亮, 並且紅色LED OFF, 細節可參考以下Demo作法:
+## Lab 3-3: Arudino常用的C語言程式介紹與實作 <a name="333"/>
+請使用Arudino, 通過Serial印出9X9乘法表, 計算時亮紅色LED, 綠色LED慢慢變亮亮完成時全亮, 並且紅色LED OFF, 細節可參考以下Demo作法: 
 
 ![chrome-capture (1)](https://user-images.githubusercontent.com/89717270/135738260-3cb3b79d-1193-4a6d-9144-2845109bb3fb.gif)
 
@@ -190,3 +198,4 @@ void loop()
   analogWrite(WLED, 0);
 }
 ````
+[RETURN](#000)
