@@ -134,4 +134,59 @@ void loop()
 
 ![chrome-capture (1)](https://user-images.githubusercontent.com/89717270/135738260-3cb3b79d-1193-4a6d-9144-2845109bb3fb.gif)
 
+程式
+````c
+int YLED = 13;
+int WLED = 11;
 
+
+int result, result2, result3;
+String d0 = "****** 9X9 Table ******";
+String d1, d2, d3;
+void setup()
+{
+  pinMode(YLED, OUTPUT);  
+  pinMode(WLED, OUTPUT);   
+  
+  Serial.begin(9600);
+
+}
+
+void loop()
+{
+  int aa = 0;
+
+  Serial.println(d0); 
+  
+  digitalWrite(YLED, HIGH);
+  analogWrite(WLED, aa); 
+  
+  for (int i=1;i<=9; i=i+3){
+    for (int j=1;j<=9; j++){
+      
+      result = i*j;
+      result2 = (i+1)*j;
+      result3 = (i+2)*j;
+      
+      d1 = String(String(i) + "X" + String(j) + "=" + String(result));
+      d2 = String(String(i+1) + "X" + String(j) + "=" + String(result2));
+      d3 = String(String(i+2) + "X" + String(j) + "=" + String(result3));
+      
+      Serial.println(d1 + ", " + d2 + ", " + d3);
+
+
+       
+      aa+=1;
+      
+      delay(100);
+    } 
+    analogWrite(WLED, aa*3); 
+    Serial.println("");
+  } 
+
+  digitalWrite(YLED, LOW);
+  analogWrite(WLED, 255); 
+  delay(2000);	
+  analogWrite(WLED, 0);
+}
+````
