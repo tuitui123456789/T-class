@@ -10,4 +10,4 @@
 
 ## Lab 8-2 零基礎Python快速入門與實作
 ### 實作P1133a + Final Result
-![image](https://user-images.githubusercontent.com/89717270/141667299-aebac1ae-1c90-4dab-be05-6d2e582074a0.png)
+![image](https://user-images.githubusercontent.com/89717270/141667378-1955e5cf-c309-4e8b-b4e7-2cbfa6fe5150.png)
