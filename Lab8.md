@@ -9,5 +9,5 @@
 ![image](https://user-images.githubusercontent.com/89717270/141667221-2edbce33-a349-4c56-889e-10a80b11e01b.png)
 
 ## Lab 8-2 零基礎Python快速入門與實作
-### 實作P1133a + Final Result
-![image](https://user-images.githubusercontent.com/89717270/141667378-1955e5cf-c309-4e8b-b4e7-2cbfa6fe5150.png)
+### 實作P1185 + Final Result
+![image](https://user-images.githubusercontent.com/89717270/142749183-3dfc6368-193a-4ecc-aa97-43e9a4741dd9.png)
