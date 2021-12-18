@@ -11,3 +11,6 @@
 ![image](https://user-images.githubusercontent.com/89717270/143729116-1e789b33-a6be-4027-88d7-ec32178bffcf.png)
 ### D.  Optional: 如果想要再多試試的同學, 可以挑戰一下從網路上找一張自己喜歡的照片來試試看 (jpg/png)
 ![image](https://user-images.githubusercontent.com/89717270/143728800-cec060fd-2e49-4ac6-b585-81bb3e0249d3.png)
+
+## Lab 9-2 Python的5個回顧練習 (Undergoing)
+### 1. 印出一個9X9的直角三角形, 期望的輸出結果如下:
