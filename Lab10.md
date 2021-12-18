@@ -4,4 +4,4 @@
 ## Lab 10-2 OpenCV電腦視覺入門
 ![image](https://user-images.githubusercontent.com/89717270/146639643-375fcd65-bdfe-4ed4-a043-b06ce2230077.png)
 ## Lab 10-3 人臉辨識實際應用
-![image](https://user-images.githubusercontent.com/89717270/146640025-7b4b10bd-f685-4fdf-a6f2-d3e48f785594.png)
+![image](https://user-images.githubusercontent.com/89717270/146640271-66d3aa2c-bf85-4ac9-9dda-18b6d12d9995.png)
